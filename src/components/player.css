@@ -1,0 +1,46 @@
+.player {
+    position: fixed;
+    bottom: 0;
+    left: 230px;
+    right: 0;
+    height: 80px;
+    background-color: #282828;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  .now-playing {
+    display: flex;
+    align-items: center;
+  }
+  
+  .now-playing img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .now-playing h4, .now-playing p {
+    color: white;
+    margin: 0;
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .controls img {
+    width: 20px;
+    cursor: pointer;
+    filter: brightness(60%);
+  }
+  
+  .controls img:hover {
+    filter: brightness(80%);
+  }
+  
