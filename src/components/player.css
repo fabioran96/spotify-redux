@@ -1,10 +1,10 @@
 .player {
     position: fixed;
     bottom: 0;
-    left: 230px;
+    left: 0;
     right: 0;
-    height: 80px;
-    background-color: #282828;
+    height: 100px;
+    background-color: #181818;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,8 +17,8 @@
   }
   
   .now-playing img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 5px;
     margin-right: 10px;
   }
@@ -35,7 +35,7 @@
   }
   
   .controls img {
-    width: 20px;
+    width: 30px;
     cursor: pointer;
     filter: brightness(60%);
   }

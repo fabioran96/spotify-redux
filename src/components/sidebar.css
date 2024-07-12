@@ -1,20 +1,77 @@
 .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 230px;
-    height: 100%;
-    background-color: black;
-    color: rgb(145, 145, 145);
+    width: 200px; 
+    background-color: #000;
+    color: #919191;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
   
   .sidebar .logo {
     width: 131px;
     height: 40px;
     margin-bottom: 30px;
+  }
+  
+  .sidebar .nav-link {
+    color: #919191;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .sidebar .nav-link:hover {
+    color: white;
+  }
+  
+  .sidebar .form-inline {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px; 
+  }
+  
+  .sidebar .form-inline .form-control {
+    flex: 1;
+  }
+  
+  .sidebar .form-inline .btn {
+    margin-left: 10px;
+  }
+  
+  .sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: auto; 
+  }
+  
+  .sign-up-btn {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+  }
+  
+  .login-btn {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+  }
+  
+  .policy-links {
+    color: #919191;
+    font-size: 12px;
+  }
+  
+  .policy-links a {
+    color: #919191;
+    text-decoration: none;
+  }
+  
+  .policy-links a:hover {
+    text-decoration: underline;
   }
   

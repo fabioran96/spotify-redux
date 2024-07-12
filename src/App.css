@@ -1,16 +1,38 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden; 
 }
 
 .App {
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .container-fluid {
-  padding-left: 230px;
+  padding-left: 250px; 
+  overflow-y: auto;
+  height: 100vh; 
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000; 
+  color: #919191;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+
+.main-content {
+  flex: 1;
+  padding: 20px;
 }
 
 @media (max-width: 768px) {
@@ -23,10 +45,11 @@ body {
   }
 
   .main-content {
-    margin-left: 0;
+    padding-left: 0;
   }
 
   .player {
     left: 0;
   }
 }
+
