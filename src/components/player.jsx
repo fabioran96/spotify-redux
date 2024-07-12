@@ -1,4 +1,3 @@
-import React from 'react';
 import './player.css';
 import { useSelector } from 'react-redux';
 import playIcon from '../assets/play.png';

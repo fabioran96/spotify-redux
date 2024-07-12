@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Sidebar from './components/sidebar';
 import Main from './components/main';
@@ -7,11 +7,18 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 function App() {
+  const [currentSong, setCurrentSong] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+  };
+
   return (
     <Provider store={store}>
       <div className="App">
-        <Sidebar />
-        <Main />
+        <Sidebar onSearch={handleSearch} />
+        <Main searchQuery={searchQuery} setCurrentSong={setCurrentSong} />
         <Player />
       </div>
     </Provider>
@@ -19,4 +26,3 @@ function App() {
 }
 
 export default App;
-
