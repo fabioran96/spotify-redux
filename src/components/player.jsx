@@ -1,27 +1,36 @@
 import React from 'react';
 import './player.css';
+import { useSelector } from 'react-redux';
+import playIcon from '../assets/play.png';
+import nextIcon from '../assets/next.png';
+import prevIcon from '../assets/prev.png';
+import repeatIcon from '../assets/repeat.png';
+import shuffleIcon from '../assets/shuffle.png';
 
-const Player = ({ currentSong }) => {
-  if (!currentSong) return null;
+const Player = () => {
+  const currentSong = useSelector(state => state.song);
 
   return (
     <div className="player">
-      <div className="now-playing">
-        <img src={currentSong.album.cover_medium} alt={currentSong.title} />
-        <div>
-          <h4>{currentSong.title}</h4>
-          <p>{currentSong.artist.name}</p>
+      {currentSong && (
+        <div className="now-playing">
+          <img src={currentSong.album.cover_medium} alt="Album Cover" />
+          <div>
+            <h4>{currentSong.title}</h4>
+            <p>{currentSong.artist.name}</p>
+          </div>
         </div>
-      </div>
+      )}
       <div className="controls">
-        <img src="/assets/prev.png" alt="Previous" />
-        <img src="/assets/play.png" alt="Play" />
-        <img src="/assets/next.png" alt="Next" />
-        <img src="/assets/repeat.png" alt="Repeat" />
-        <img src="/assets/shuffle.png" alt="Shuffle" />
+        <img src={prevIcon} alt="Previous" />
+        <img src={playIcon} alt="Play" />
+        <img src={nextIcon} alt="Next" />
+        <img src={repeatIcon} alt="Repeat" />
+        <img src={shuffleIcon} alt="Shuffle" />
       </div>
     </div>
   );
 };
 
 export default Player;
+
